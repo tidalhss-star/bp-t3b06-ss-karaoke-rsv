@@ -2,21 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/about.html</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/blog.html</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/posts/compare-002-1h848b4.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/posts/interview-001-ndf0lw.html</loc>
@@ -55,6 +61,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/posts/qa-001-1h848b4.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/posts/review-001.html</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -68,7 +80,7 @@
   </url>
   <url>
     <loc>https://tidalhss-star.github.io/bp-t3b06-ss-karaoke-rsv/feed.xml</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
