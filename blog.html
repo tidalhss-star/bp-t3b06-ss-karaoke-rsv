@@ -1,375 +1,93 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <meta name="description" content="상수동 최고의 가라오케 예약, 프리미엄 사운드 시스템과 완벽한 공간. 365일 24시 운영, 단체 및 기업 행사 예약은 010-6279-0862. 상수 가라오케 예약 지금 바로 연락주세요.">
-    <meta name="keywords" content="상수 가라오케, 상수 가라오케 예약, 상수동 가라오케, 홍대 가라오케, 마포구 가라오케, 노래방, 코인노래방, 가라오케 예약, 상수 노래방">
-    <link rel="canonical" href="https://t3b06-ss-karaoke-rsv.vercel.app/blog">
-    <title>블로그 | 상수 가라오케 예약 – 프리미엄 사운드 시스템</title>
-    <!-- Open Graph -->
-    <meta property="og:title" content="블로그 | 상수 가라오케 예약 – 프리미엄 사운드 시스템">
-    <meta property="og:description" content="상수동 최고의 가라오케 예약, 프리미엄 사운드 시스템과 완벽한 공간. 365일 24시 운영, 단체 및 기업 행사 예약은 010-6279-0862. 상수 가라오케 예약 지금 바로 연락주세요.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://t3b06-ss-karaoke-rsv.vercel.app/blog">
-    <meta property="og:image" content="https://t3b06-ss-karaoke-rsv.vercel.app/og-image.jpg">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="상수 가라오케 예약">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="블로그 | 상수 가라오케 예약 – 프리미엄 사운드 시스템">
-    <meta name="twitter:description" content="상수동 최고의 가라오케 예약, 프리미엄 사운드 시스템과 완벽한 공간. 365일 24시 운영, 단체 및 기업 행사 예약은 010-6279-0862. 상수 가라오케 예약 지금 바로 연락주세요.">
-    <meta name="twitter:image" content="https://t3b06-ss-karaoke-rsv.vercel.app/og-image.jpg">
-    <style>
-        /* Brutalist Avant-Garde CSS – KR Raw Concrete Theme */
-        :root {
-            --bg: #f5f0eb;
-            --bg-alt: #e8e2da;
-            --bg-card: #ffffff;
-            --text: #1a1a1a;
-            --text-alt: #3a3a3a;
-            --accent: #2d2d2d;
-            --accent-light: #4a4a4a;
-            --border: #1a1a1a;
-            --border-light: #c4bdb5;
-            --shadow: 6px 6px 0 rgba(0,0,0,0.15);
-            --shadow-hover: 8px 8px 0 rgba(0,0,0,0.2);
-            --font: 'Courier New', 'Nanum Gothic Coding', monospace;
-            --font-alt: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
-            --line: 1.6;
-            --space-xs: 0.25rem;
-            --space-sm: 0.5rem;
-            --space-md: 1rem;
-            --space-lg: 2rem;
-            --space-xl: 4rem;
-            --max-w: 1200px;
-            --nav-h: 72px;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-        }
-        body {
-            font-family: var(--font);
-            background: var(--bg);
-            color: var(--text);
-            line-height: var(--line);
-            min-height: 100vh;
-            padding-top: var(--nav-h);
-            background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 8px);
-        }
-        a {
-            color: var(--text);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: all 0.15s;
-        }
-        a:hover {
-            background: var(--accent);
-            color: var(--bg);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* Layout */
-        .container {
-            max-width: var(--max-w);
-            margin: 0 auto;
-            padding: 0 var(--space-md);
-        }
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--nav-h);
-            background: var(--bg);
-            border-bottom: 3px solid var(--border);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 var(--space-lg);
-            font-size: 1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        nav .logo {
-            font-size: 1.35rem;
-            letter-spacing: 0.05em;
-            background: var(--accent);
-            color: var(--bg);
-            padding: 0.25rem 0.75rem;
-            text-decoration: none;
-            border: 2px solid var(--border);
-        }
-        nav .logo:hover {
-            background: var(--text);
-            color: var(--bg);
-        }
-        nav .nav-links {
-            display: flex;
-            gap: var(--space-lg);
-            list-style: none;
-        }
-        nav .nav-links a {
-            text-decoration: none;
-            padding: 0.25rem 0;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s;
-        }
-        nav .nav-links a:hover {
-            border-bottom-color: var(--accent);
-            background: transparent;
-            color: var(--text);
-        }
-        /* Hamburger (mobile) */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-        }
-        .hamburger-menu span {
-            display: block;
-            width: 26px;
-            height: 3px;
-            background: var(--accent);
-            transition: all 0.3s;
-        }
-        /* responsive-768 */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: flex;
-            }
-            nav .nav-links {
-                display: none;
-                position: absolute;
-                top: var(--nav-h);
-                left: 0;
-                width: 100%;
-                background: var(--bg);
-                flex-direction: column;
-                padding: var(--space-lg);
-                border-bottom: 3px solid var(--border);
-                box-shadow: var(--shadow);
-                gap: var(--space-md);
-            }
-            nav .nav-links.active {
-                display: flex;
-            }
-        }
-        /* Hero / Section */
-        .hero {
-            padding: var(--space-xl) 0;
-            border-bottom: 3px solid var(--border);
-            background: var(--bg-alt);
-        }
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            margin-bottom: var(--space-md);
-            position: relative;
-            display: inline-block;
-        }
-        .hero h1::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 6px;
-            background: var(--accent);
-            margin-top: var(--space-sm);
-        }
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 720px;
-            font-family: var(--font-alt);
-            color: var(--text-alt);
-        }
-        /* Blog post */
-        .blog-post {
-            padding: var(--space-xl) 0;
-        }
-        .blog-post article {
-            background: var(--bg-card);
-            padding: var(--space-lg);
-            border: 3px solid var(--border);
-            box-shadow: var(--shadow);
-            margin-bottom: var(--space-xl);
-        }
-        .blog-post h2 {
-            font-size: 1.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: -0.01em;
-            margin-bottom: var(--space-md);
-            border-left: 8px solid var(--accent);
-            padding-left: var(--space-md);
-        }
-        .blog-post h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin: var(--space-lg) 0 var(--space-sm);
-        }
-        .blog-post p, .blog-post li {
-            font-family: var(--font-alt);
-            font-size: 1rem;
-            color: var(--text-alt);
-            margin-bottom: var(--space-md);
-        }
-        .blog-post ul, .blog-post ol {
-            padding-left: var(--space-lg);
-            margin-bottom: var(--space-md);
-        }
-        .blog-post .meta {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #7a756f;
-            margin-bottom: var(--space-lg);
-            padding-bottom: var(--space-md);
-            border-bottom: 1px solid var(--border-light);
-        }
-        .blog-post .cta-box {
-            background: var(--bg-alt);
-            padding: var(--space-lg);
-            border: 3px solid var(--border);
-            margin-top: var(--space-lg);
-            text-align: center;
-        }
-        .blog-post .cta-box p {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: var(--space-sm);
-        }
-        .blog-post .cta-box a {
-            display: inline-block;
-            background: var(--accent);
-            color: var(--bg);
-            padding: 0.6rem 2rem;
-            text-decoration: none;
-            font-weight: 700;
-            border: 2px solid var(--border);
-            transition: all 0.15s;
-        }
-        .blog-post .cta-box a:hover {
-            background: var(--text);
-            color: var(--bg);
-            transform: translate(-2px, -2px);
-            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
-        }
-        /* FAQ */
-        .faq {
-            padding: var(--space-xl) 0;
-            background: var(--bg-alt);
-            border-top: 3px solid var(--border);
-            border-bottom: 3px solid var(--border);
-        }
-        .faq h2 {
-            font-size: 1.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: var(--space-lg);
-            text-align: center;
-            letter-spacing: -0.01em;
-        }
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-lg);
-        }
-        @media (max-width: 768px) {
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .faq-item {
-            background: var(--bg-card);
-            padding: var(--space-md) var(--space-lg);
-            border: 2px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-        .faq-item h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: var(--space-sm);
-            text-transform: uppercase;
-        }
-        .faq-item p {
-            font-family: var(--font-alt);
-            font-size: 0.95rem;
-            color: var(--text-alt);
-        }
-        /* Footer */
-        footer {
-            padding: var(--space-lg) 0;
-            text-align: center;
-            border-top: 3px solid var(--border);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-alt);
-        }
-        footer a {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-        /* Utilities */
-        .text-center { text-align: center; }
-        .mt-lg { margin-top: var(--space-lg); }
-        .mb-lg { margin-bottom: var(--space-lg); }
-    </style>
+  <meta charset="UTF-8">
+  <title>상수 가라오케 예약 블로그 – 정보 가이드</title>
+  <meta name="description" content="상수 가라오케 예약에 대한 깊이 있는 블로그 글입니다. 이용 인원·시간·목적에 따른 선택 기준과 실전 팁을 통해 합리적인 결정을 도와드립니다.">
+  <meta name="keywords" content="상수 가라오케, 예약, 블로그, 이용 가이드, 비용, 인원 별 선택">
+  <link rel="canonical" href="https://sangsu-song-info.link-hub.org/blog.html">
+  <meta property="og:title" content="상수 가라오케 예약 블로그 – 정보 가이드">
+  <meta property="og:description" content="상수 가라오케를 처음 이용하는 분들을 위한 실전 예약 가이드. 비용 구조와 상황별 체크리스트를 상세히 풀어드립니다.">
+  <meta property="og:url" content="https://sangsu-song-info.link-hub.org/blog.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 기존 CSS 파일을 그대로 사용합니다 -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+  <header class="q-btn-esxs">
+    <h1>상수 가라오케 예약 블로그</h1>
+    <p>다양한 상황에 맞춘 예약 팁과 실제 비용 예시를 한눈에 정리합니다.</p>
     <nav>
-        <a href="/" class="logo">SS KARAOKE</a>
-        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="/">홈</a></li>
-            <li><a href="/about">소개</a></li>
-            <li><a href="/reservation">예약</a></li>
-            <li><a href="/blog">블로그</a></li>
-            <li><a href="/contact">연락처</a></li>
-        </ul>
+      <ul class="r-btn-p1li">
+        <li><a href="/index.html">홈</a></li>
+        <li><a href="/about.html">소개</a></li>
+        <li><a href="/services.html">서비스</a></li>
+        <li><a href="/contact.html">연락처</a></li>
+        <li><a href="/blog.html">블로그</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>블로그</h1>
-            <p>전문가의 시각으로 분석한 프리미엄 가라오케의 기준. 데이터로 검증된 사운드 시스템과 공간 설계에 관한 인사이트를 제공합니다.</p>
-        </div>
+  <main class="r-main-e9sd">
+    <section class="q-side-ayht">
+      <h2>1. 왜 블로그 형식이 도움이 될까?</h2>
+      <p>단순히 표와 리스트만으로는 예약 과정을 완전히 이해하기 어렵습니다. 블로그 형식은 실제 이용자의 이야기를 서술형으로 풀어내어, “내 상황도 이와 비슷하다”는 공감대를 형성합니다.</p>
+      <p>또한, 단계별 흐름을 자연스럽게 연결함으로써 검색 엔진에 친화적인 구조를 제공하고, 방문자가 페이지를 오래 머물게 만들어 SEO 효과도 기대할 수 있습니다.</p>
     </section>
 
-    <!-- Blog Post -->
-    <section class="blog-post">
-        <div class="container">
-            <article>
-                <h2>왜 프리미엄 사운드 시스템이 가라오케의 핵심인가</h2>
-                <div class="meta">2025년 4월 7일 · 8분 읽음 · 카테고리: 음향 기술</div>
-                
-                <p>가라오케 업계에서 객실 만족도를 결정짓는 가장 중요한 단일 요소는 단연 사운드 시스템입니다. 2024년 한국콘텐츠진흥원의 조사에 따르면, 가라오케 이용객의 83.4%가 '음질'을 재방문 의사의 최우선 기준으로 꼽았습니다. 이는 인테리어(5.2%), 주류 옵션(7.1%), 위치(4.3%)를 압도하는 수치입니다.</p>
+    <section class="q-side-ayht">
+      <h2>2. 기본 예약 절차</h2>
+      <p>상수 가라오케는 전화, 온라인 폼, 그리고 현장 방문 세 가지 경로를 제공합니다. 가장 많이 활용되는 온라인 폼은 5분 안에 입력이 완결되는 설계라서, 급하게 예약이 필요할 때도 부담이 적습니다.</p>
+      <p>예약 시 반드시 확인해야 할 세 가지 핵심 정보는 ‘인원 수’, ‘예정 시간’, 그리고 ‘이용 목적(노래 연습, 회식, 파티 등)’입니다. 이 정보를 정확히 입력하면 자동으로 최적의 패키지가 제안됩니다.</p>
+    </section>
 
-                <h3>주파수 응답 평탄도와 왜율의 중요성</h3>
-                <p>프리미엄 사운드 시스템과 일반 시스템의 차이는 객관적 측정 데이터에서 명확히 드러납니다. 당사가 설치한 JBL Professional SRX800 시리즈는 20Hz–20kHz 구간에서 ±1.5dB의 주파수 응답 평탄도를 기록합니다. 이는 THX 인증 기준(±3dB)보다 2배 정확한 수준입니다. 총고조파왜율(THD)은 0.02% 미만으로, 일반 가라오케 시스템(0.5–1%) 대비 25배 이상 낮습니다. 이러한 수치는 가수의 실제 음색을 왜곡 없이 재현하고, 배경음악의 각 악기 소리를 선명하게 분리해줍니다.</p>
+    <section class="q-side-ayht">
+      <h2>3. 인원 규모에 따른 선택 기준</h2>
+      <p><strong>소규모(2~4명)</strong>는 1시간 기준 ‘기본 플래시 패키지’를 권장합니다. 마이크와 기본 음향 설비가 포함되어 있어 별도 추가 비용이 거의 없습니다.</p>
+      <p><strong>중규모(5~10명)</strong>는 ‘시간 연장 옵션’과 ‘음료 무제한 패키지’를 함께 선택하면, 회식 분위기를 살리면서도 비용 효율을 높일 수 있습니다.</p>
+      <p><strong>대규모(11명 이상)</strong>는 ‘전용 룸 예약’과 ‘전광판 영상 서비스’를 추가하는 것이 일반적입니다. 대형 파티에서는 사전 현장 미팅을 통해 장비 배치를 맞추는 것이 좋습니다.</p>
+    </section>
+
+    <section class="q-side-ayht">
+      <h2>4. 시간대별 비용 차이</h2>
+      <p>주중(월~목) 낮 시간(10시~16시)은 ‘비수기 요금’이 적용돼 기본 요금보다 15% 저렴합니다. 이는 비즈니스 회의용으로 많이 활용되는 시간대이기 때문에, 예산을 절감하려는 기업 고객에게 적합합니다.</p>
+      <p>반면, 금요일 저녁부터 새벽까지는 ‘프라임 타임’으로 지정돼 요금이 20% 상승합니다. 이때는 인원 당 부담이 커지므로, 사전 예산 계산이 필수입니다.</p>
+    </section>
+
+    <section class="q-side-ayht">
+      <h2>5. 목적에 따라 선택해야 할 옵션</h2>
+      <p><strong>노래 연습</strong>을 주 목적으로 할 경우, 마이크와 음향 장비만 있으면 충분합니다. 이때는 ‘연습 모드’ 설정을 통해 자동 볼륨 조절과 곡 리스트 자동 저장 기능을 활용할 수 있습니다.</p>
+      <p><strong>회식·친목</strong>이 목표라면, ‘음료 무제한’과 ‘스낵 바’ 옵션을 함께 선택하는 것이 현명합니다. 회식 분위기를 살리기 위해서는 조명 색상을 ‘따뜻한 황색’으로 설정하는 것을 권장합니다.</p>
+      <p><strong>파티·이벤트</strong>라면, ‘전광판 영상 서비스’와 ‘DJ 부스’ 옵션을 추가해 분위기를 고조시킬 수 있습니다. 대형 파티에서는 사전 현장 점검을 통해 전기 용량과 안전 규정을 확인해야 합니다.</p>
+    </section>
+
+    <section class="q-side-ayht">
+      <h2>6. FAQ</h2>
+      <div class="q-box-wa1z">
+        <h3>예약 취소는 언제까지 가능한가요?</h3>
+        <p>예약 24시간 전까지는 무료 취소가 가능하고, 그 이후에는 50% 비용이 부과됩니다. 특별 이벤트 시에는 취소 정책이 다를 수 있으니 사전에 확인이 필요합니다.</p>
+      </div>
+      <div class="q-box-wa1z">
+        <h3>노래 리스트는 어떻게 준비하나요?</h3>
+        <p>온라인 폼에 노래 제목을 미리 입력하면 자동으로 곡 리스트가 생성됩니다. 현장에서는 터치스크린을 통해 즉시 추가·삭제가 가능해 급변하는 분위기에 대응할 수 있습니다.</p>
+      </div>
+      <div class="q-box-wa1z">
+        <h3>음향 장비는 어떤 것이 제공되나요?</h3>
+        <p>마이크 2개, 스피커 4개, 믹서 1대가 기본 제공됩니다. 추가 장비(예: 추가 마이크, 레이저 조명)는 별도 비용으로 신청할 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="q-side-ayht">
+      <h2>7. 마무리와 다음 단계</h2>
+      <p>상수 가라오케 예약은 인원·시간·목적을 명확히 정의하고, 해당 상황에 맞는 옵션을 선택하는 것이 핵심입니다. 위에서 소개한 체크리스트와 비용 차이를 파악하면, 불필요한 지출을 최소화하면서도 최적의 이용 경험을 만들 수 있습니다.</p>
+      <p>다음 번 예약 시에는 꼭 사전 확인 항목을 메모해두세요. 그리고 가능하면 평일 낮 시간대를 활용해 비용을 절감해 보는 것도 좋은 전략입니다. 즐거운 노래와 함께하는 시간이 되길 바랍니다!</p>
+    </section>
+  </main>
+
+  <footer class="x-item-0tfw">
+    <p>© 2026 상수 가라오케 예약 블로그. 모든 권리 보유.</p>
+  </footer>
 </body>
 </html>
